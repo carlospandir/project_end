@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+/*cabeçalho*/
+  header {
+    background-color: #00bf63cb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+/*principal*/
+  main {
+    display: flex;
+    flex: 1;
+  }
+/*parte principal*/
+  article {
+    flex: 3;
+    padding: 20px;
+    background-color: #f9f9f9;
+    background-image: url(fundo.jpg);
+    background-repeat: no-repeat, repeat;
+    opacity: 0.8;
+    background-size: 100%;
+    bottom: 0;
+  }
+.plantas img{
+    width: 30%;
+  }
+/*lateral*/
+  aside {
+    flex: 1;
+    padding: 20px;
+    background-color: #ddd;
+  }
+/*roda pe*/
+  footer {
+    background-color: #6D351A;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+
+    aside {
+      order: -1;
+    }
+  }
