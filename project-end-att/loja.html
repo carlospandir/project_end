@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Jardinagem</title>
+  <link rel="stylesheet" href="loja.css">
+</head>
+<body>
+  <!--cabeçalho-->
+  <header>
+    <div class="topo">
+      <div class="logo">
+        <img src="https://www.zarla.com/images/zarla-soul-jardim-1x1-2400x2400-20220125-3dvymp8jr8fwvgrxbggy.png?crop=1:1,smart&width=250&dpr=2" alt="Logo">
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!--principais da loja-->
+  <div class="layout">
+    <main>
+      <div class="produtos">
+        <div class="produto-p">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="Vaso de Cerâmica">
+          <p>Vaso de Cerâmica</p>
+        </div>
+        <div class="produto-p">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="Kit de Sementes">
+          <p>Kit Sementes</p>
+        </div>
+        <div class="produto-p">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="Regador Vintage">
+          <p>Regador Vintage</p>
+        </div>
+        <div class="produto-p">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="Pá de Jardinagem">
+          <p>Pá de Jardinagem</p>
+        </div>
+      </div>
+      <!-- Botão hamburguer -->
+    <button class="hamburger" onclick="toggleAside()">☰</button>
+  </main>
+    <!--produtos que vendem na loja-->
+    <aside id="lojaAside">
+        <h3 id="mini">Mini Loja</h3 >
+        <div class="loja-lateral">
+          <!--produtos da loja-->
+          <div class="produto" data-id="1">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="1">
+            <h3>Produto 1</h3>
+            <p>R$ 100,00</p>
+            <button class="adicionar">Comprar</button>  
+          </div>
+
+          <div class="produto" data-id="2">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="2">
+            <h3>Produto 2</h3>
+            <p>R$ 150,00</p>
+            <button class="adicionar">Comprar</button>  
+          </div>
+
+          <div class="produto" data-id="3">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="3">
+            <h3>Produto 3</h3>
+            <p>R$ 175,00</p>
+            <button class="adicionar">Comprar</button>  
+          </div>
+          
+          <div class="produto" data-id="4">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="4">
+            <h3>Produto 4</h3>
+            <p>R$ 200,00</p>
+            <button class="adicionar">Comprar</button>  
+          </div>
+
+          <div class="produto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp" alt="5">
+            <h3>Produto 5</h3>
+            <p>R$ 250,00</p>
+            <button class="adicionar">Comprar</button>  
+          </div>
+          <!-- quantidade do carrinho do Carrinho -->
+          <div id="iconeCarrinho" onclick="toggleCarrinho()">
+           <img src="carrinho-foto.png" alt="" width="30px">
+            <span id="quantidadeCarrinho">0</span>
+          </div>
+          
+          <!-- Painel do Carrinho -->
+          <div id="carrinhoPainel" class="carrinho-fechado">
+            <div id="carrinhoTopo">
+              <h3>Carrinho</h3>
+            </div>
+            <div id="itensCarrinho"></div>
+            <p>Total: R$ <span id="totalCarrinho">0,00</span></p>
+            <button id="finalizarCompra">Finalizar Compra</button>
+          </div>
+      </aside>
+  </div>
+  <!--roda pé da loja-->
+  <footer>
+    <p>&copy; 2025 Minha Loja de Jardinagem - Todos os direitos reservados.</p>
+  </footer>
+
+  <!--funçao para o menu aparecer do lado-->
+  <script>
+    function toggleAside() {
+      document.getElementById('lojaAside').classList.toggle('open');
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

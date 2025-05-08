@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="clogin.css">
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+
+<body>
+  <!--modo escuro-->
+  <button id="escuro">🌙</button>
+
+    <!--are de login-->
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="login" placeholder="Login" required><br>
+      <input type="password" id="senha" placeholder="Senha" required><br>
+
+      <!--recuperar senha-->
+      <div class="link-senha">
+        <a href="recuperar-senha.html">Esqueci minha senha</a>
+      </div>
+
+      <!--entra no site-->
+      <div class="botoes-login">
+        <button type="submit" id="entrar">Entrar</button>
+        <button type="button" id="limpar" onclick="limparCampos()">Limpar</button>
+      </div>
+
+    </form>
+    <!-- mensagem de erro-->
+  <p id="mensagemErro" class="erro-mensagem"></p>
+
+  <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+</div>
+  <!--administrador pra teste-->
+  <script src="admin.js"></script>
+    <!--valida os dados do cadastro-->
+  <script src="jslogin.js"></script>
+  <!--script escuro-->
+  <script src="darkmode.js"></script>
+</body>
+</html>

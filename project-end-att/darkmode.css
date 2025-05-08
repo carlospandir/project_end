@@ -1,0 +1,55 @@
+/*icone modo claro/escuro */
+button img {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  /*butao escuro*/
+  #escuro {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: fixed;
+    top: 200px;
+    left: 20%;
+    z-index: 1000;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  /* Modo Escuro */
+  body.dark-mode {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  body.dark-mode #escuro {
+    background-color: #6D351A;
+    color: #fff;
+  }
+  body.dark-mode p{
+    color: black;
+  }
+  body.dark-mode #limpar{
+    background-color: #45a049;
+    color: #fff
+  }
+  body.dark-mode .login-container{
+    background-color: #fff;
+  }
+  body.dark-mode h2{
+    color: #45a049;
+  }
+  body.dark-mode #entrar{
+    background-color: #f44336;
+  }
+  body.dark-mode label{
+    color: black;
+  }
+  body.dark-mode legend{
+    color:#45a049;
+  }
+  body.dark-mode #recuperar{
+    background-color:#f44336 ;
+  }

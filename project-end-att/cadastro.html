@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="ccadastro.css">
+  <link rel="stylesheet" href="darkmode.css">
+</head>
+<body>
+  <!--modo escuro-->
+  <button id="escuro">🌙</button>
+
+  <!--formulario de cadastro-->
+  <form id="cadastroForm">
+    <h2>Cadastro</h2>
+
+    <fieldset>
+      <legend> Dados Pessoais</legend>
+      <input type="text" id="nome" placeholder="Nome completo" required><br>
+      <input type="date" id="nascimento" required><br>
+      <input type="text" id="cpf" placeholder="CPF" required><br>
+      <div class="sexo">
+        <label><strong>Sexo:</strong></label><br>
+        <input type="radio" name="sexo" id="masculino" value="Masculino">
+        <label for="masculino">Masculino</label><br>
+      
+        <input type="radio" name="sexo" id="feminino" value="Feminino">
+        <label for="feminino">Feminino</label><br>
+      
+        <input type="radio" name="sexo" id="naoDizer" value="Prefiro não dizer">
+        <label for="naoDizer">Prefiro não dizer</label><br>
+      </div>
+      <input type="text" id="celular" placeholder="Celular (21)987654321" required><br>
+      <input type="text" id="fixo" placeholder="Telefone Fixo 21-987654321"><br>
+    </fieldset>
+
+    <fieldset>
+      <legend> Endereço</legend>
+      <input type="text" id="cep" placeholder="CEP" required><br>
+      <input type="text" id="pais" placeholder="País" required><br>
+      <input type="text" id="estado" placeholder="Estado" required><br>
+      <input type="text" id="logradouro" placeholder="Rua ou Logradouro" required><br>
+      <input type="text" id="numero" placeholder="Número da casa" required><br>
+      <input type="text" id="referencia" placeholder="Referência" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend> Dados de Login</legend>
+      <input type="text" id="login" placeholder="Login (6 caracteres alfanuméricos)" required><br>
+      <input type="password" id="senha" placeholder="Senha" required><br>
+      <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required><br>
+    </fieldset>
+    <!--botao de envio-->
+    <div class="botoes">
+      <button type="submit" id="entrar" >Cadastrar</button>
+      <button type="button" id="limpar" onclick="window.location.href='login.html'">Fazer Login</button>
+    </div>
+  </form>
+  <!--onde armazena os dados do form-->
+  <script src="jscadastro.js"></script>
+  <!--script escuro-->
+  <script src="darkmode.js"></script>
+</body>
+</html>

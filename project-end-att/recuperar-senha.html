@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  <link rel="stylesheet" href="clogin.css">
+  <link rel="stylesheet" href="darkmode.css">
+</head>
+<body>
+  <!--modo escuro-->
+  <button id="escuro">🌙</button>
+
+  <div class="login-container">
+    <h2>Recuperar Senha</h2>
+    <!--form pra recuperar a senha-->
+    <form id="recuperarForm">
+      <input type="text" id="cpf" placeholder="Digite seu CPF" required><br>
+      <input type="text" id="login" placeholder="Digite seu Login" required><br>
+      <button type="submit" id="recuperar">Recuperar</button>
+    </form>
+    <!--onde vai aparecer a nova senha-->
+    <p id="mensagemRecuperacao"></p>
+    <!--volta pra lojar-->
+    <p id="voltar"><a href="login.html">Voltar ao login</a></p>
+  </div>
+  <!--funcao pra pegar a senha-->
+  <script src="jsrecuperar.js"></script>
+  <!--script escuro-->
+  <script src="darkmode.js"></script>
+</body>
+</html>

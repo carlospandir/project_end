@@ -1,0 +1,388 @@
+/*marrom #6D351A*/
+/*verde #4CAF50*/
+
+/* estutural principal pega a tela toda*/
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* header preso no topo */
+header {
+  height: 100px;
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.topo .logo img {
+  width: 75px;
+}
+
+.topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*remove as bolinhas do menu*/
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul a {
+  text-decoration: none;
+}
+
+/* conteudo do principal e do lateral*/
+.layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+  background-color: #2e6c2e;
+}
+
+/* MAIN = 80% */
+main {
+  width: 80%;
+  background-image: url('https://http2.mlstatic.com/D_NQ_NP_853776-MLB51179331940_082022-O-kalanchoe-orgyalis-colher-de-cobre-com-8cm-a-12cm.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Layout padrão - tela grande */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.produto-p {
+  background-color: #ddd;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+}
+
+.produto-p img {
+  width: 90%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10%;
+  transition: transform 0.4s;
+}
+
+.produto-p img:hover {
+  transform: scale(1.1);
+}
+
+/* loragem lateral */
+aside {
+  width: 20%;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* estilo do produto-p de venda */
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*imagens lateral*/
+.produto img {
+  width: 100%;
+  max-width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.produto p {
+  font-size: 14px;
+  color: #3c8c3c;
+  margin-bottom: 10px;
+}
+
+/*butao de comprar*/
+.produto button {
+  background-color: #3c8c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.produto button:hover {
+  background-color: #2e6c2e;
+}
+
+/* roda pe no final da tela */
+footer {
+  height: 50px;
+  background-color: #6D351A;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+
+/* Layout padrão*/
+.layout {
+  display: flex;
+}
+
+/* Estilo principal */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+aside#lojaAside {
+  width: 300px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  height: auto;
+  position: static;
+}
+
+/* Produtos  main */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 colunas */
+  gap: 20px;
+}
+
+.produto-p {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* botao hamburguer */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  z-index: 1100;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* icone do carrinho */
+#iconeCarrinho {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #28a745;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* carrinho */
+#carrinhoPainel {
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  width: 200px;
+  max-height: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+/*pro carrinho não aparecer*/
+#carrinhoPainel.hidden {
+  display: none;
+}
+
+#itensCarrinho {
+  overflow-y: auto;
+  max-height: 180px;
+  margin-bottom: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.item-carrinho {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.item-carrinho img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.item-carrinho div {
+  flex-grow: 1;
+}
+
+.remover {
+  background: #dc3545;
+  color: white;
+  border: none;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#finalizarCompra {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 608px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  /* Mostrar botão*/
+  .hamburger {
+    display: block;
+  }
+
+  main {
+    width: 85vw;
+    height: 80vh;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 608px) {
+    .produtos {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+
+    .produto-p {
+      min-width: 250px;
+      height: 200px;
+      flex-shrink: 0;
+    }
+  }
+
+  /*menu lateral escondido */
+  aside#lojaAside {
+    position: fixed;
+    top:12.5%;
+    right: -100%;
+    width: 15%;
+    max-width: 240px;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.849);
+    padding: 10px;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.4s ease-in-out;
+    margin-top: 45px;
+    margin-bottom: 20%;
+  }
+/*posiçao da loja*/
+  aside#lojaAside.open {
+    right: 0;
+  }
+/*tamanho do container em menu*/
+  .produto {
+    width: 100%;
+    height: 150px;
+    margin-left: -15px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    background-color: #a7a4a4a9;
+  }
+  /* tira barra de rolagem em X */
+  #lojaAside{
+    overflow-x: hidden;
+  }
+  /**tira o texto da loja*/
+  .produto h3{
+    display: none;
+  }
+  /*botao de comprar*/
+  .produto .adicionar{
+    width: 90%;
+    height: 75px;
+    border-radius: 10%;
+  }
+  /*imagens transparete*/
+  .produto img {
+    opacity: 0.8;
+  }
+  /*texto da loja nao aparecer*/
+  #mini{
+    display: none;
+  }
+}
