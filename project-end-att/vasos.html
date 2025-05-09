@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vasos de Jardim</title>
+  <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+  <!--cabeçalho-->
+  <header>
+    <div class="topo">
+      <div class="logo">
+        <a href="loja.html">
+            <img src="https://www.zarla.com/images/zarla-soul-jardim-1x1-2400x2400-20220125-3dvymp8jr8fwvgrxbggy.png?crop=1:1,smart&width=250&dpr=2" alt="Logo">
+        </a>
+    </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="vasos.html" id="uten">Vasos</a></li>
+          <li><a href="sementes.html">Sementes</a></li>
+          <li><a href="regadore.html">Regadores</a></li>
+          <li><a href="utensilios.html">Utensílios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!--principais da loja-->
+  <div class="layout">
+    <main>
+    <div class="produtos">
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Ancinho</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Cavadeira</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Enxada</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Picareta</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Pá de jardim</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Vassoura de jardim</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Arco de serra</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Foice</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Serrote</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Tesoura para podar</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Luva de jardim</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+      <div class="produto" data-id="1">
+        <img src="" alt="1">
+        <h3>Machado</h3>
+        <p>R$ 100,00</p>
+        <button class="adicionar">Comprar</button>  
+      </div>
+    </div>
+
+<!-- quantidade do carrinho do Carrinho -->
+<div id="iconeCarrinho" onclick="toggleCarrinho()">
+    <img src="carrinho-foto.png" alt="" width="30px">
+     <span id="quantidadeCarrinho">0</span>
+   </div>
+   
+   <!-- Painel do Carrinho -->
+   <div id="carrinhoPainel" class="carrinho-fechado">
+     <div id="carrinhoTopo">
+       <h3>Carrinho</h3>
+     </div>
+     <div id="itensCarrinho"></div>
+     <p>Total: R$ <span id="totalCarrinho">0,00</span></p>
+     <button id="finalizarCompra">Finalizar Compra</button>
+   </div>
+
+
+      <!-- Botão hamburguer -->
+    <button class="hamburger" onclick="toggleAside()">☰</button>
+  </main>
+    <!--produtos que vendem na loja-->
+
+  </div>
+  <!--roda pé da loja-->
+  <footer>
+    <p>&copy; 2025 Minha Loja de Jardinagem - Todos os direitos reservados.</p>
+  </footer>
+
+  <!--funçao para o menu aparecer do lado-->
+  <script>
+    function toggleAside() {
+      document.getElementById('lojaAside').classList.toggle('open');
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
